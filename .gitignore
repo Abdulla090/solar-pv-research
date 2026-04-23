@@ -1,0 +1,35 @@
+## LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+*.idx
+*.ilg
+*.ind
+
+## Generated PDF (optional — remove this line if you want PDFs tracked)
+# *.pdf
+
+## OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+## Editor backups
+*.swp
+*.swo
+*~
+*.bak

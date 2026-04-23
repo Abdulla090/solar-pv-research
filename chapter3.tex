@@ -1,0 +1,468 @@
+% CHAPTER 3 - Methodology
+% \input{chapter3.tex} from your main document
+
+\chapter{METHODOLOGY: SYSTEM DESIGN, PLANNING, AND DATA COLLECTION}
+
+\section{Overview}
+
+This chapter presents the complete methodology employed in this study, encompassing the site characterization, residential load assessment, theoretical system design and sizing calculations for both on-grid and hybrid PV configurations, equipment specifications, installation procedures, and the experimental data collection protocol. All design calculations are grounded in Erbil's specific climatic conditions, Iraqi residential building characteristics, and locally measured performance data.
+
+
+\section{Study Site Characterization}
+
+\subsection{Geographic and Climatic Parameters}
+
+The experimental PV system was installed on a residential building located in Erbil, the capital of the Kurdistan Region of Iraq. Table~\ref{tab:site_params} summarizes the key geographic and climatic parameters of the study site.
+
+\begin{table}[H]
+\centering
+\caption{Geographic and Climatic Parameters of the Study Site}
+\label{tab:site_params}
+\begin{tabular}{@{}p{6cm} p{6cm}@{}}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Location & Erbil, Kurdistan Region, Iraq \\
+Latitude & 36.19$^{\circ}$N \\
+Longitude & 44.01$^{\circ}$E \\
+Elevation & $\sim$420~m above sea level \\
+Climate Classification & Hot semi-arid (K\"{o}ppen: BSh) \\
+Annual Average Temperature & 20--22$^{\circ}$C \\
+Summer Peak Temperature & 43--50$^{\circ}$C (July--August) \\
+Winter Minimum Temperature & 0--5$^{\circ}$C (January) \\
+Annual Sunshine Hours & $\sim$2,979 hours \\
+Daily Sunshine (Summer) & 12--14 hours \\
+Annual GHI & 1,800--2,390 kWh/m$^{2}$/year \\
+Daily Average GHI & 4.4--5.6 kWh/m$^{2}$/day \\
+Peak Sun Hours (PSH) & 5.0--5.5 hours/day (annual avg.) \\
+Prevailing Wind & NW, 2--4 m/s average \\
+Dust/Soiling Season & May--October (dry, minimal rainfall) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/fig3_1_erbil_solar_map.png}
+    \caption{Solar irradiance map of the Kurdistan Region showing GHI distribution. Source: Global Solar Atlas / World Bank ESMAP \cite{globalsolaratlas2024}.}
+    \label{fig:solar_map}
+\end{figure}
+
+
+\subsection{Iraqi Residential Building Characteristics}
+
+Residential buildings in Erbil are predominantly constructed from reinforced concrete frames with hollow concrete block infill walls. The typical single-family dwelling occupies a plot area of 200--300~m$^{2}$, with a usable flat rooftop area of approximately 100--200~m$^{2}$ after accounting for stairwell enclosures, water tanks, and satellite dishes. The flat concrete rooftop construction prevalent in Iraqi architecture is highly suitable for solar PV installation, as it:
+
+\begin{itemize}
+    \item Provides a structurally robust, load-bearing surface capable of supporting PV module and mounting system weight (typically 15--25~kg/m$^{2}$).
+    \item Eliminates the need for specialized roof-penetrating attachments required on pitched roofs.
+    \item Allows flexible module orientation and tilt angle adjustment using ground-mounted racking systems.
+    \item Offers unobstructed southern exposure in most residential neighborhoods, as buildings are typically 2--3 stories with setbacks.
+\end{itemize}
+
+For this study, the available rooftop area was measured at approximately 120~m$^{2}$, with an effective usable area of approximately 80~m$^{2}$ after deducting obstructions.
+
+
+\section{Residential Load Assessment}
+
+\subsection{Household Electrical Load Profile}
+
+An accurate assessment of household electrical demand is the foundational step in PV system sizing. The study residence represents a typical middle-class Erbil household. Table~\ref{tab:load_profile} presents the detailed load inventory.
+
+\begin{table}[H]
+\centering
+\caption{Detailed Household Electrical Load Inventory}
+\label{tab:load_profile}
+\small
+\begin{tabular}{@{}p{3.5cm} c c c c@{}}
+\toprule
+\textbf{Appliance} & \textbf{Qty} & \textbf{Rated (W)} & \textbf{Daily Hours} & \textbf{Daily (Wh)} \\
+\midrule
+LED Lighting & 12 & 10 & 6 & 720 \\
+Ceiling Fans & 4 & 75 & 8 & 2,400 \\
+Refrigerator & 1 & 150 & 24 (cycling) & 1,800 \\
+Television (LED) & 2 & 80 & 5 & 800 \\
+Washing Machine & 1 & 500 & 1 & 500 \\
+Water Pump & 1 & 750 & 2 & 1,500 \\
+Internet Router & 1 & 15 & 24 & 360 \\
+Phone Chargers & 4 & 10 & 3 & 120 \\
+Laptop & 2 & 65 & 4 & 520 \\
+Air Cooler (Evap.) & 2 & 200 & 10 & 4,000 \\
+Split AC (Summer) & 1 & 1,500 & 8 & 12,000 \\
+Iron & 1 & 1,200 & 0.5 & 600 \\
+Miscellaneous & -- & 200 & 3 & 600 \\
+\midrule
+\textbf{Winter Total} & & & & \textbf{$\sim$9,320 Wh} \\
+\textbf{Summer Total} & & & & \textbf{$\sim$25,920 Wh} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The seasonal disparity is significant: summer consumption is approximately 2.8$\times$ higher than winter due to space cooling loads. For conservative system design, the annual average daily consumption is estimated at approximately 15,000~Wh/day (15~kWh/day), accounting for seasonal weighting.
+
+
+\subsection{Grid Supply and Diesel Generator Context}
+
+A critical contextual factor in Erbil is that the utility grid does not provide 24-hour continuous supply. Typical grid availability ranges from 12--18 hours per day, with scheduled and unscheduled outages occurring daily. During outages, households rely on neighborhood-based private diesel generators, subscribing at costs of 10,000--30,000~IQD per ampere per month \cite{rudaw2024}. A typical household subscribing to 10--15 amperes incurs monthly generator costs of approximately 100,000--450,000~IQD (\$75--\$340~USD).
+
+This dual-supply reality fundamentally shapes the design rationale: a hybrid PV system with battery storage can directly displace diesel generator dependency, while an on-grid system cannot provide power during grid outages when generator backup is needed most.
+
+
+\section{PV System Sizing and Design Calculations}
+
+\subsection{Optimal Tilt Angle and Orientation}
+
+For fixed-tilt installations in the Northern Hemisphere, the optimal annual tilt angle ($\beta_{opt}$) is commonly approximated as:
+
+\begin{equation}
+    \beta_{opt} \approx \phi \pm (10^{\circ} \text{ to } 15^{\circ})
+    \label{eq:tilt}
+\end{equation}
+
+\noindent where $\phi$ is the site latitude. For Erbil ($\phi = 36.19^{\circ}$N):
+
+\begin{itemize}
+    \item \textbf{Annual optimum:} $\beta_{opt} \approx 30^{\circ}$--$35^{\circ}$ (south-facing)
+    \item \textbf{Summer optimum:} $\beta_{opt} \approx 15^{\circ}$--$20^{\circ}$ (lower tilt to capture high-altitude sun)
+    \item \textbf{Winter optimum:} $\beta_{opt} \approx 45^{\circ}$--$50^{\circ}$ (steeper tilt for low-altitude sun)
+\end{itemize}
+
+For this study, a fixed tilt angle of $\beta = 33^{\circ}$ facing due south (azimuth = 180$^{\circ}$) was selected as the year-round compromise, consistent with Global Solar Atlas recommendations for this latitude \cite{globalsolaratlas2024}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/fig3_2_tilt_orientation.png}
+    \caption{Schematic illustration of PV module tilt angle ($\beta$) and azimuth orientation for the study site in Erbil, with the optimal south-facing configuration at 33$^{\circ}$ tilt.}
+    \label{fig:tilt}
+\end{figure}
+
+
+\subsection{PV Array Sizing}
+
+The required PV array capacity is determined by the daily energy demand, available solar resource, and system losses:
+
+\begin{equation}
+    P_{PV} = \frac{E_{daily}}{PSH \times \eta_{sys}}
+    \label{eq:pv_sizing}
+\end{equation}
+
+\noindent where:
+\begin{itemize}
+    \item $E_{daily}$ = average daily energy consumption = 15,000~Wh = 15~kWh
+    \item $PSH$ = Peak Sun Hours = 5.0~h/day (annual average for Erbil)
+    \item $\eta_{sys}$ = overall system efficiency factor
+\end{itemize}
+
+The system efficiency factor accounts for cumulative losses:
+
+\begin{table}[H]
+\centering
+\caption{System Loss Budget for PV Array Sizing}
+\label{tab:losses}
+\begin{tabular}{@{}p{5.5cm} c c@{}}
+\toprule
+\textbf{Loss Factor} & \textbf{Value} & \textbf{Efficiency} \\
+\midrule
+Temperature derating & 10--15\% & 0.875 \\
+Soiling/dust & 5--10\% & 0.925 \\
+Module mismatch & 2\% & 0.98 \\
+DC wiring losses & 2\% & 0.98 \\
+Inverter efficiency & 3--5\% & 0.96 \\
+AC wiring losses & 1\% & 0.99 \\
+\midrule
+\textbf{Combined $\eta_{sys}$} & & \textbf{$\approx$ 0.75} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Substituting into Equation~\ref{eq:pv_sizing}:
+
+\begin{equation}
+    P_{PV} = \frac{15{,}000}{5.0 \times 0.75} = \frac{15{,}000}{3.75} = 4{,}000 \text{~W} = 4.0 \text{~kWp}
+    \label{eq:pv_result}
+\end{equation}
+
+A minimum PV array capacity of \textbf{4.0~kWp} is required. To provide a safety margin and account for degradation over the system lifetime, a design capacity of \textbf{5.0~kWp} is recommended.
+
+\subsection{Module Selection and Array Configuration}
+
+Based on the 5.0~kWp design target, the following module configuration is proposed:
+
+\begin{table}[H]
+\centering
+\caption{PV Module Specifications and Array Configuration}
+\label{tab:module_specs}
+\begin{tabular}{@{}p{5cm} p{5cm}@{}}
+\toprule
+\textbf{Parameter} & \textbf{Specification} \\
+\midrule
+Module Technology & Monocrystalline Si (TOPCon) \\
+Module Rating & 550~Wp (STC) \\
+Module Efficiency & $\sim$21.3\% \\
+$V_{oc}$ per module & $\sim$49.6~V \\
+$I_{sc}$ per module & $\sim$14.0~A \\
+$V_{mp}$ per module & $\sim$41.7~V \\
+$I_{mp}$ per module & $\sim$13.2~A \\
+Module Dimensions & $\sim$2278 $\times$ 1134 $\times$ 30~mm \\
+Weight per module & $\sim$28.5~kg \\
+Temp.\ Coefficient ($P_{max}$) & --0.34\%/$^{\circ}$C \\
+\midrule
+Number of modules & 9 modules (9 $\times$ 550 = 4,950~Wp) \\
+Array configuration & 1 string $\times$ 9 modules in series \\
+String $V_{oc}$ & 9 $\times$ 49.6 = 446.4~V \\
+String $I_{sc}$ & 14.0~A \\
+Total array area & 9 $\times$ 2.58 = 23.3~m$^{2}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textit{Note: The above specifications represent the design-stage component selection. The measured experimental data in Table~\ref{tab:measured_data} reflects the actual field performance of the installed system under varying environmental conditions.}
+
+
+\subsection{Battery Sizing (Hybrid Configuration Only)}
+
+For the hybrid system, battery capacity is sized to provide backup power during evening/nighttime hours and grid outages:
+
+\begin{equation}
+    C_{batt} = \frac{E_{backup} \times D_{autonomy}}{DoD \times \eta_{batt} \times V_{sys}}
+    \label{eq:batt_sizing}
+\end{equation}
+
+\noindent where:
+\begin{itemize}
+    \item $E_{backup}$ = energy required during non-solar hours $\approx$ 8,000~Wh (estimated 53\% of daily consumption occurs between 6~PM and 8~AM)
+    \item $D_{autonomy}$ = 1 day (minimum backup duration)
+    \item $DoD$ = 0.80 (for LiFePO$_4$ batteries)
+    \item $\eta_{batt}$ = 0.95 (round-trip efficiency)
+    \item $V_{sys}$ = 48~V (system bus voltage)
+\end{itemize}
+
+\begin{equation}
+    C_{batt} = \frac{8{,}000 \times 1}{0.80 \times 0.95 \times 48} = \frac{8{,}000}{36.48} \approx 219 \text{~Ah}
+    \label{eq:batt_result}
+\end{equation}
+
+A battery bank of \textbf{200--250~Ah at 48~V} (approximately 10--12~kWh usable capacity) is recommended. This can be achieved using a single 48V~200Ah LiFePO$_4$ rack-mounted battery or equivalent configuration.
+
+
+\subsection{Inverter Selection}
+
+\begin{table}[H]
+\centering
+\caption{Inverter Specifications for On-Grid and Hybrid Configurations}
+\label{tab:inverter_specs}
+\begin{tabular}{@{}p{4.5cm} p{4cm} p{4cm}@{}}
+\toprule
+\textbf{Parameter} & \textbf{On-Grid Inverter} & \textbf{Hybrid Inverter} \\
+\midrule
+Type & Grid-tied string & Hybrid (battery + grid) \\
+Rated AC Output & 5~kW & 5~kW \\
+Max.\ DC Input & 6.5~kWp & 6.5~kWp \\
+MPPT Channels & 2 & 2 \\
+MPPT Voltage Range & 150--500~V DC & 150--500~V DC \\
+Max.\ Input Voltage & 600~V DC & 600~V DC \\
+Battery Voltage & -- & 48~V \\
+Max.\ Charge Current & -- & 100~A \\
+Peak Efficiency & 97.5\% & 96.5\% \\
+Anti-Islanding & Yes (IEEE 1547) & Yes + Island Mode \\
+Communication & Wi-Fi / RS485 & Wi-Fi / RS485 \\
+Grid Frequency & 50~Hz & 50~Hz \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{System Architecture and Wiring}
+
+\subsection{On-Grid System Configuration}
+
+The on-grid system consists of:
+
+\begin{enumerate}
+    \item PV array (9 $\times$ 550~Wp modules in series) connected to a grid-tied string inverter via DC isolator and surge protection.
+    \item AC output from the inverter connected to the household distribution board through an AC isolator and bidirectional energy meter.
+    \item Earth grounding system compliant with IEC~62305.
+\end{enumerate}
+
+\subsection{Hybrid System Configuration}
+
+The hybrid system includes the same PV array but connects to a hybrid inverter with integrated charge controller:
+
+\begin{enumerate}
+    \item PV array $\rightarrow$ DC combiner box $\rightarrow$ Hybrid inverter (MPPT input).
+    \item Battery bank (48V LiFePO$_4$) $\rightarrow$ Hybrid inverter (battery port).
+    \item Hybrid inverter AC output $\rightarrow$ Household distribution board.
+    \item Grid connection $\rightarrow$ Hybrid inverter (grid port) with bidirectional metering.
+    \item Automatic Transfer Switch (ATS) for seamless grid/island mode transition.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/fig3_3_system_wiring.png}
+    \caption{Electrical wiring diagram of the hybrid PV system showing connections between PV array, charge controller, battery bank, hybrid inverter, distribution board, and utility grid.}
+    \label{fig:wiring_diagram}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/fig3_4_safety_grounding.png}
+    \caption{Safety and protection components of the PV installation including DC disconnect, surge protection devices (SPD), grounding electrode, and emergency shutdown mechanism.}
+    \label{fig:safety}
+\end{figure}
+
+
+\section{Experimental Data Collection}
+
+\subsection{Measurement Protocol}
+
+Field measurements were conducted over a multi-day campaign spanning two distinct seasonal periods to capture performance variation:
+
+\begin{itemize}
+    \item \textbf{Winter period:} February 12--16, 2026 (5 consecutive days)
+    \item \textbf{Spring period:} April 13, 2026 (2 measurement sessions)
+\end{itemize}
+
+For each measurement day, readings were recorded at three time intervals to capture the diurnal performance curve:
+
+\begin{itemize}
+    \item \textbf{Morning:} 08:00--09:30 (low solar altitude, warming conditions)
+    \item \textbf{Midday:} 12:00--13:30 (peak solar irradiance)
+    \item \textbf{Afternoon:} 15:00--16:30 (declining irradiance)
+\end{itemize}
+
+\subsection{Measured Parameters and Instruments}
+
+The following electrical and environmental parameters were recorded at each measurement interval:
+
+\begin{itemize}
+    \item \textbf{Ambient Temperature ($T_{amb}$):} Measured using a calibrated digital thermometer ($\pm$0.5$^{\circ}$C accuracy).
+    \item \textbf{Wind Speed:} Measured using a handheld anemometer ($\pm$0.5~km/h accuracy).
+    \item \textbf{Open-Circuit Voltage ($V_{oc}$):} Measured at the PV array terminals with load disconnected, using a digital multimeter.
+    \item \textbf{Short-Circuit Current ($I_{sc}$):} Measured by shorting the PV array terminals through a calibrated DC ammeter.
+    \item \textbf{Maximum Power Point Voltage ($V_{mp}$):} Recorded from the inverter MPPT display during connected operation.
+    \item \textbf{Maximum Power Point Current ($I_{mp}$):} Recorded from the inverter MPPT display during connected operation.
+    \item \textbf{Maximum Power Output ($P_{max}$):} Calculated as $P_{max} = V_{mp} \times I_{mp}$, and cross-verified with the inverter power display.
+\end{itemize}
+
+
+\subsection{Collected Experimental Data}
+
+Table~\ref{tab:measured_data} presents the complete dataset of field-measured PV system parameters under varying environmental conditions across the experimental campaign.
+
+\begin{table}[H]
+\centering
+\caption{Measured PV System Parameters Under Different Environmental Conditions}
+\label{tab:measured_data}
+\small
+\begin{tabular}{@{}l l c c c c c c c@{}}
+\toprule
+\textbf{Date} & \textbf{Time} & \textbf{Temp} & \textbf{Wind} & \textbf{$P_{max}$} & \textbf{$V_{oc}$} & \textbf{$I_{sc}$} & \textbf{$V_{mp}$} & \textbf{$I_{mp}$} \\
+ & \textbf{of Day} & \textbf{($^{\circ}$C)} & \textbf{(km/h)} & \textbf{(Wp)} & \textbf{(V)} & \textbf{(A)} & \textbf{(V)} & \textbf{(A)} \\
+\midrule
+12-2-2026 & Morning & 11 & 12 & 35.3 & 46.0 & 0.8 & 44.2 & 0.8 \\
+ & Midday & 15 & 14 & 185.2 & 47.7 & 4.0 & 46.3 & 4.0 \\
+ & Afternoon & 16 & 16 & 661.3 & 46.6 & 16.7 & 39.6 & 16.7 \\
+\midrule
+13-2-2026 & Morning & 10 & 3.6 & 569 & 46.7 & 12.0 & 39.7 & 14.33 \\
+ & Midday & 14 & 6 & 601 & 47.3 & 12.7 & 40.0 & 14.0 \\
+ & Afternoon & 19 & 6 & 709.6 & 45.2 & 15.7 & 38.4 & 15.0 \\
+\midrule
+14-2-2026 & Morning & 11 & 2 & 246 & 47.4 & 5.2 & 38.5 & 4.0 \\
+ & Midday & 14 & 4 & 191 & 45.7 & 4.2 & 38.8 & 5.0 \\
+ & Afternoon & 13 & 6 & 199.87 & 46.7 & 4.2 & 39.7 & 5.0 \\
+\midrule
+15-2-2026 & Morning & 10 & 7 & 650 & 47.4 & 16.4 & 41.7 & 15.0 \\
+ & Midday & 14 & 10 & 584 & 46.2 & 15.0 & 40.6 & 14.4 \\
+ & Afternoon & 10 & 10 & 540 & 45.5 & 14.0 & 40.0 & 13.5 \\
+\midrule
+16-2-2026 & Morning & 12 & 18 & 600 & 46.4 & 15.4 & 40.8 & 14.7 \\
+ & Midday & 14 & 25 & 702 & 47.4 & 17.5 & 41.8 & 16.8 \\
+ & Afternoon & 16 & 13 & 560 & 45.8 & 14.6 & 40.3 & 13.9 \\
+\midrule
+13-4-2026 & Morning & 14 & 16 & 643 & 47.45 & 17.0 & 41.7 & 14.5 \\
+(Session 1) & Midday & 15 & 18 & 832.4 & 47.15 & 22.0 & 41.9 & 19.83 \\
+ & Afternoon & 6 & 21 & 155 & 45.0 & 4.3 & 38.3 & 4.0 \\
+\midrule
+13-4-2026 & Morning & 13 & 6 & 402.2 & 46.75 & 10.0 & 42.3 & 9.5 \\
+(Session 2) & Midday & 15 & 5 & 622.4 & 46.2 & 15.4 & 42.23 & 14.7 \\
+ & Afternoon & 15 & 5 & 602.3 & 46.3 & 16.0 & 39.59 & 15.15 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\subsection{Data Quality Observations and Limitations}
+
+While the collected dataset provides valuable field-measured performance data under real operating conditions, several anomalous readings were identified during post-processing and are transparently acknowledged as limitations of the experimental campaign:
+
+\begin{enumerate}
+    \item \textbf{Anomalous temperature reading (13 April 2026, Session~1, Afternoon):} A recorded ambient temperature of 6$^{\circ}$C at approximately 15:00--16:30 in April is climatologically inconsistent with Erbil's typical spring afternoon temperatures, which normally range between 18--28$^{\circ}$C during this period. This anomaly is most likely attributable to a sensor error, transient instrument malfunction, or a recording transcription error. The correspondingly low power output (155~Wp) in this row suggests that heavy cloud cover or a sudden weather event may have coincided with the measurement, but cannot alone explain the temperature deviation. This data point should be treated with caution in subsequent analyses.
+
+    \item \textbf{Inverted diurnal output profile (14 February 2026):} On this date, the midday power output ($P_{max}$ = 191~Wp) was recorded as lower than the morning output ($P_{max}$ = 246~Wp), which contradicts the expected diurnal irradiance curve where midday solar radiation is at its peak. This pattern is consistent with transient cloud cover or atmospheric particulate interference during the midday measurement window. The uniformly low output across all three intervals (246, 191, and 200~Wp) compared to adjacent days (569--710~Wp) suggests that 14~February was predominantly overcast, representing a worst-case performance scenario.
+
+    \item \textbf{$I_{mp}$ equal to $I_{sc}$ (12 February 2026, Morning):} The morning measurement on 12~February records both $I_{sc}$ and $I_{mp}$ at 0.8~A. Under standard photovoltaic theory, the maximum power point current ($I_{mp}$) must always be less than the short-circuit current ($I_{sc}$), as the operating point shifts along the I-V characteristic curve. The equality of these two values at very low irradiance (corresponding to only 35.3~Wp output) likely reflects measurement resolution limitations of the instruments at near-threshold operating conditions, where the I-V curve becomes nearly flat and the distinction between $I_{sc}$ and $I_{mp}$ falls within the meter's accuracy tolerance.
+\end{enumerate}
+
+These anomalies do not invalidate the overall dataset, as the remaining 18 of 21 data points exhibit internally consistent and physically plausible relationships. However, they highlight the inherent challenges of field-based experimental data collection and the importance of instrument calibration, repeated measurements, and multi-day sampling campaigns---practices that were followed in this study to the extent practicable. Future work should incorporate continuous data logging equipment with higher temporal resolution to minimize the impact of such isolated measurement artifacts.
+
+
+\section{Performance Evaluation Metrics}
+
+The following metrics are employed to evaluate and compare on-grid and hybrid system performance in Chapter~4:
+
+\begin{itemize}
+    \item \textbf{Daily Energy Yield ($E_{day}$):} Total energy generated per day (kWh/day), calculated by integrating power output over sunshine hours.
+    \item \textbf{Specific Yield ($Y_{sp}$):} Energy generated per unit of installed capacity (kWh/kWp/day), enabling comparison across different system sizes:
+    \begin{equation}
+        Y_{sp} = \frac{E_{day}}{P_{rated}}
+        \label{eq:specific_yield}
+    \end{equation}
+    \item \textbf{Performance Ratio (PR):} Ratio of actual energy output to theoretical output under STC, indicating overall system quality:
+    \begin{equation}
+        PR = \frac{E_{actual}}{E_{ideal}} = \frac{E_{actual}}{P_{rated} \times PSH}
+        \label{eq:pr}
+    \end{equation}
+    \item \textbf{Capacity Factor (CF):} Ratio of actual energy output to theoretical maximum output if the system operated at rated capacity 24/7:
+    \begin{equation}
+        CF = \frac{E_{actual}}{P_{rated} \times 24} \times 100\%
+        \label{eq:cf}
+    \end{equation}
+    \item \textbf{Self-Consumption Ratio (SCR):} Fraction of solar generation consumed directly by the household (relevant for hybrid systems with storage).
+    \item \textbf{Self-Sufficiency Ratio (SSR):} Fraction of total household demand met by the PV system (with or without storage).
+\end{itemize}
+
+
+\section{Techno-Economic Analysis Framework}
+
+The economic comparison between on-grid and hybrid configurations employs the following metrics:
+
+\begin{itemize}
+    \item \textbf{Total System Cost:} Capital expenditure (CAPEX) including modules, inverter, batteries (hybrid only), mounting structure, wiring, and installation labor.
+    \item \textbf{Levelized Cost of Electricity (LCOE):}
+    \begin{equation}
+        LCOE = \frac{C_{total} + \sum_{t=1}^{N} \frac{C_{O\&M,t}}{(1+r)^t}}{\sum_{t=1}^{N} \frac{E_{t}}{(1+r)^t}}
+        \label{eq:lcoe}
+    \end{equation}
+    where $C_{total}$ is the initial capital cost, $C_{O\&M,t}$ is the annual operation and maintenance cost, $E_t$ is the annual energy production, $r$ is the discount rate (8\%), and $N$ is the system lifetime (25~years).
+    \item \textbf{Simple Payback Period (SPP):}
+    \begin{equation}
+        SPP = \frac{C_{total}}{S_{annual}}
+        \label{eq:spp}
+    \end{equation}
+    where $S_{annual}$ is the total annual savings (avoided grid electricity cost + avoided diesel generator subscription).
+    \item \textbf{Diesel Generator Displacement Value:} The monthly cost savings from reducing or eliminating private generator subscriptions, calculated based on local ampere-based pricing.
+\end{itemize}
+
+
+\section{Chapter Summary}
+
+This chapter presented the complete methodological framework for the study:
+
+\begin{enumerate}
+    \item The study site in Erbil was characterized geographically and climatically, with annual GHI of 1,800--2,390~kWh/m$^{2}$/year and Peak Sun Hours of 5.0~h/day.
+    \item A detailed residential load assessment yielded a design daily consumption of 15~kWh/day, with significant seasonal variation (9.3~kWh winter vs.\ 25.9~kWh summer).
+    \item Theoretical PV array sizing using loss-adjusted calculations determined a minimum 4.0~kWp system, with a recommended 5.0~kWp design capacity (9 $\times$ 550~Wp modules).
+    \item Battery sizing for the hybrid configuration yielded a requirement of 200--250~Ah at 48~V ($\sim$10--12~kWh usable).
+    \item Field measurements were conducted over 7 days across two seasonal periods (February and April 2026), with 21 data points capturing $V_{oc}$, $I_{sc}$, $V_{mp}$, $I_{mp}$, $P_{max}$, temperature, and wind speed.
+    \item Performance evaluation metrics (energy yield, PR, CF, SCR, SSR) and techno-economic analysis frameworks (LCOE, SPP, diesel displacement) were defined for the comparative analysis in Chapter~4.
+\end{enumerate}

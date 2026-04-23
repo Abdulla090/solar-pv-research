@@ -1,0 +1,112 @@
+%========================================================
+% CHAPTER 1
+%========================================================
+\chapter{INTRODUCTION}
+
+\section{Background}
+
+The escalating global demand for electricity, driven by rapid population growth, urbanization, and industrial expansion, has placed unprecedented pressure on conventional power generation infrastructure worldwide. According to the International Energy Agency \cite{iea2024}, global electricity consumption surpassed 29,000~TWh in 2024, with projections indicating a continued annual growth rate of 3.4\% through 2030. This rising demand, coupled with the urgent need to mitigate climate change and reduce greenhouse gas (GHG) emissions, has catalyzed a paradigm shift toward renewable energy sources, with solar photovoltaic (PV) technology emerging as one of the most scalable, cost-effective, and rapidly deployable solutions available \cite{irena2024}.
+
+The global solar PV market has witnessed extraordinary expansion in recent years. Cumulative installed PV capacity exceeded 2.2~terawatts (TW) by the end of 2024 and reached approximately 2.8~TW by mid-2025, with annual capacity additions surpassing 600~GW---a figure that would have been inconceivable a decade earlier \cite{ieapvps2025,ren21_2025}. Solar PV alone accounted for approximately 7\% of global electricity generation in 2024, increasing to 8.8\% in the first half of 2025, and for the first time in history, a modern renewable energy source led absolute global energy demand expansion \cite{ember2025,pvtech2025}. This remarkable trajectory has been fueled by an unprecedented decline in technology costs: the price per watt of PV modules has fallen by approximately 85--90\% since 2010, while the installed cost of residential systems has decreased from \$8.00--\$9.00/W to approximately \$2.50--\$3.50/W over the same period \cite{owid2024,nrel2024}. The global benchmark levelized cost of electricity (LCOE) for utility-scale solar reached \$0.039/kWh in 2025 \cite{bnef2025}, making solar energy cheaper than fossil-fuel-generated electricity in the majority of global markets.
+
+Within this global context, distributed residential PV systems have emerged as a particularly significant segment. Distributed solar installations added nearly 200--220~GW globally in 2024 alone \cite{ren21_2025}. Residential PV systems enable electricity generation at the point of consumption, reducing transmission losses, enhancing energy security, and empowering households with greater control over their energy costs and carbon footprint. The proliferation of residential solar has been accelerated by supportive policy mechanisms such as net metering, feed-in tariffs, tax incentives, and declining battery storage costs \cite{rai2013,parida2011}.
+
+The Republic of Iraq, with a population of approximately 46.1~million as of 2025 \cite{iraqcensus2025}, faces one of the most severe and persistent electricity crises in the Middle East and North Africa (MENA) region. Iraq's energy sector is almost entirely dependent on fossil fuels, with oil and natural gas accounting for approximately 99\% of electricity generation \cite{eia2024}. The country's CO\textsubscript{2} emissions reached approximately 233~million tonnes in 2023, rising to 239~million tonnes in 2024, with a per capita emission rate of approximately 5.19~tonnes \cite{worldometers2024}. Despite government plans to increase power generation capacity to 44~GW, Iraq continues to face a persistent supply--demand gap estimated at approximately 10,000~MW, with technical and commercial losses accounting for 50--60\% of generated electricity \cite{rudaw2024}. The residential sector is the largest consumer of electricity in Iraq, accounting for approximately 65\% of total national consumption \cite{iea2024}, driven primarily by space cooling demands during extreme summer temperatures exceeding 43$^{\circ}$C.
+
+The Kurdistan Region of Iraq (KRI), and its capital Erbil in particular, presents a unique case study for residential solar energy deployment. Located at approximately 36.19$^{\circ}$N latitude and 44.01$^{\circ}$E longitude, at an elevation of approximately 420~m above sea level, Erbil experiences a hot semi-arid climate. The city receives an annual average of approximately 9~hours of sunshine per day, with summer sunshine exceeding 12--14~hours daily. The annual global horizontal irradiation (GHI) in the Kurdistan Region ranges between 1,800 and 2,390~kWh/m$^{2}$/year, with daily GHI values of 4.4--5.6~kWh/m$^{2}$/day \cite{globalsolaratlas2024}, representing exceptionally favorable conditions for photovoltaic energy harvesting. The Kurdistan Regional Government (KRG) has set an ambitious target of achieving 3~GW of solar power capacity by 2033 and launched the ``Runaki'' (Light) project in late 2024 \cite{krgmoe2024}.
+
+Historically, Iraqi households have been heavily reliant on private diesel generators. Households subscribe to neighborhood-based generator services at costs of 10,000--30,000~Iraqi Dinars per ampere per month, with total monthly expenditures reaching 40,000--200,000~IQD (\$30--\$150~USD) depending on seasonal demand \cite{rudaw2024,intechopen2023}. These diesel generators constitute a significant source of air pollution (CO\textsubscript{2}, CO, NO\textsubscript{x}, SO\textsubscript{x}, and particulate matter), noise pollution, and soil contamination. The transition from diesel generator dependency to residential solar PV systems therefore represents both an economic imperative and an environmental and public health necessity.
+
+Two primary configurations of residential solar PV systems are commonly deployed: on-grid (grid-tied) systems and hybrid systems. On-grid systems operate in direct connection with the utility network, allowing households to consume generated solar electricity while relying on the grid during periods of insufficient production \cite{lund2008}. These systems are characterized by lower capital costs but automatically shut down during grid outages \cite{enphase2024}. In contrast, hybrid PV systems integrate battery energy storage systems (BESS) with grid connectivity, enabling households to store excess solar generation, implement peak-shaving strategies, and maintain power supply during grid interruptions \cite{zakeri2015}. While hybrid systems incur higher capital costs, they offer substantially greater energy autonomy and supply reliability \cite{lund2025}.
+
+Given the unique intersection of abundant solar resources, chronic electricity deficits, heavy reliance on polluting diesel generators, and an evolving regulatory landscape in the Kurdistan Region, this research undertakes a comprehensive comparative analysis of hybrid and on-grid solar PV systems for residential applications in Erbil.
+
+
+%--------------------------------------------------------
+\section{Literature Review}
+
+\subsection{Evolution of Solar PV Technology and Cost Trends}
+
+The photovoltaic effect was first observed by Alexandre-Edmond Becquerel in 1839. Modern PV cells are predominantly manufactured from crystalline silicon \cite{green2022}. Commercially available monocrystalline silicon cells achieve efficiencies of 18--24\%, while polycrystalline cells typically achieve 16--20\% \cite{parida2011,nrel2024}.
+
+The transition from PERC technology to next-generation architectures---TOPCon, HJT, and IBC---has pushed commercial efficiencies to new heights \cite{longi2024}. Perovskite-on-silicon tandem solar cells have achieved certified laboratory efficiencies exceeding 34\%, surpassing the Shockley--Queisser limit for single-junction silicon cells \cite{longi2024,pvmag2024}. Modern PV modules exhibit median degradation rates of approximately 0.5--0.6\% per year, ensuring systems retain approximately 87--90\% of original output after 25~years \cite{nrel2023,jordan2013}.
+
+
+\subsection{Residential On-Grid PV Systems}
+
+On-grid systems have been widely studied for residential applications due to their simplicity and lower upfront costs. Rawat et al.\ \cite{rawat2024} demonstrated that on-grid systems effectively meet household demand at significantly lower installation costs than hybrid alternatives. Hassan \cite{hassan2021} found that on-grid systems offer lower life-cycle costs in urban settings with reliable grid availability.
+
+However, anti-islanding protection causes on-grid systems to disconnect during outages. This limitation has been identified as a critical barrier in developing countries with unreliable electricity infrastructure \cite{walker2013,zelazna2020}.
+
+
+\subsection{Hybrid PV Systems with Battery Energy Storage}
+
+Hybrid PV-battery systems enable excess solar generation to be stored and dispatched during evening peak demand or grid outages \cite{zakeri2015}. Shah et al.\ \cite{shah2015} found that hybrid configurations significantly reduce energy bills and carbon footprints. \.{Z}elazna et al.\ \cite{zelazna2020} concluded that hybrid PV systems are highly competitive when environmental and technological factors are weighted alongside economic considerations. Serat et al.\ \cite{serat2024} identified polycrystalline hybrid PV systems paired with battery storage as the most cost-effective configuration for energy autonomy.
+
+Battery sizing and optimization are critical determinants. Hesse et al.\ \cite{hesse2017} demonstrated that optimal battery sizing must account for specific household load profiles. Li et al.\ \cite{li2019} found that optimization can reduce grid imports by 60--80\%. Koskela et al.\ \cite{koskela2019} showed that proper battery sizing can increase self-consumption by over 30\%. Gabr et al.\ \cite{gabr2021} demonstrated that multi-objective optimization results in significantly shorter payback periods. Khezri et al.\ \cite{khezri2020} provided a universal methodology using Net Present Cost minimization. Shabbir et al.\ \cite{shabbir2017} confirmed that detailed load-curve analysis is necessary for optimal battery sizing.
+
+
+\subsection{Solar Energy Potential and Electricity Context in Iraq}
+
+Despite receiving annual GHI values of 1,800--2,390~kWh/m$^{2}$/year and approximately 2,979~hours of annual sunshine, renewable energy accounted for only 1--2\% of Iraq's total electricity generation as of 2025 \cite{irena2024,eia2024}. The federal government has set a target of 12~GW of renewable energy by 2030. However, existing Iraqi solar research has focused on theoretical assessment rather than practical field performance evaluation.
+
+
+\subsection{System Design Methodologies}
+
+Residential PV system design involves load assessment, system sizing, component selection, and installation optimization \cite{bandyopadhyay2020}. System sizing must account for daily solar irradiation, module efficiency, temperature derating, system losses, and desired energy autonomy \cite{mulleriyawage2020}. For hybrid systems, battery capacity determination requires consideration of daily energy consumption, backup duration, depth of discharge limits, and cycle life \cite{shabbir2017}. The ideal tilt angle for Erbil approximates 30--35$^{\circ}$.
+
+
+%--------------------------------------------------------
+\section{Research Gap}
+
+Despite the substantial body of literature surrounding photovoltaic systems, several critical gaps persist within the specific context of the Kurdistan Region of Iraq:
+
+\begin{enumerate}
+    \item \textbf{Lack of field-collected data:} The majority of existing regional studies rely heavily on computational simulations and theoretical modeling, with a marked deficit in research utilizing actual measurements under Erbil's specific climatological conditions.
+    \item \textbf{Generic load profiles:} Most published analyses employ idealized residential load profiles that fail to capture the unique, highly volatile consumption patterns of Iraqi households, characterized by extreme summer cooling demands and diesel generator rotations.
+    \item \textbf{Absence of direct comparisons:} There is a scarcity of literature presenting direct, side-by-side empirical comparisons of on-grid and hybrid configurations operating under identical environmental conditions in Iraq.
+    \item \textbf{Unquantified diesel displacement:} Existing literature rarely quantifies the specific economic and environmental benefits of residential PV in terms of displacing the highly expensive, unregulated private diesel generator sector.
+    \item \textbf{Evolving regulatory context:} The rapidly changing regulatory landscape in the Kurdistan Region, including emerging policies like the ``Runaki'' initiative, has not yet been adequately incorporated into localized PV system design frameworks.
+\end{enumerate}
+
+
+%--------------------------------------------------------
+\section{Objectives of the Study}
+
+The primary aim is to develop a practical, locally grounded framework for the design, performance evaluation, and techno-economic comparison of hybrid and on-grid residential PV systems in Erbil. Specific objectives:
+
+\begin{enumerate}
+    \item To collect and analyze field-measured experimental data on PV system parameters under real operating conditions in Erbil.
+    \item To design and size residential on-grid and hybrid PV systems based on measured performance data and actual household energy demand.
+    \item To evaluate and compare on-grid and hybrid system performance in terms of energy yield, efficiency, capacity factor, and reliability.
+    \item To conduct a comprehensive techno-economic analysis comparing capital costs, operational costs, payback periods, and LCOE for both configurations.
+    \item To provide evidence-based, implementable recommendations for optimal residential PV system deployment in the Kurdistan Region.
+\end{enumerate}
+
+
+%--------------------------------------------------------
+\section{Novelty and Contribution}
+
+This research introduces several novel contributions to the field of renewable energy systems engineering, specifically tailored to the Middle Eastern operational environment:
+
+\begin{itemize}
+    \item \textbf{Field-based experimental validation:} By utilizing empirical data collected from an active, real-world PV installation in Erbil, the study transcends theoretical modeling to provide grounded, real-world performance characterizations.
+    \item \textbf{Dual-configuration comparative framework:} The research enables the simultaneous, rigorous evaluation of both hybrid and on-grid architectures under identical environmental and localized load conditions.
+    \item \textbf{Context-specific economic analysis:} The study uniquely integrates Erbil's complex multi-tiered household consumption patterns, utility tariff structures, and the granular economics of diesel generator displacement.
+    \item \textbf{Contribution to a data-scarce region:} This work contributes vital primary experimental data to a geographically underserved research domain, establishing a new baseline for future studies in the region.
+\end{itemize}
+
+
+%--------------------------------------------------------
+\section{Significance of the Study}
+
+The findings of this study carry significant practical and academic implications across multiple stakeholder levels:
+
+\begin{itemize}
+    \item \textbf{For residential consumers and homeowners:} The techno-economic frameworks provide actionable, evidence-based guidance for selecting the optimal PV system configuration, facilitating informed capital investments.
+    \item \textbf{For energy policymakers and the KRG:} The empirical data and grid-interaction analyses offer critical insights needed to design more effective incentive programs and net-metering regulations, supporting the 3~GW by 2033 mandate.
+    \item \textbf{For system designers and EPC contractors:} The study provides a comprehensive reference of locally validated design parameters, sizing methodologies, and performance benchmarks that mitigate the risk of system underperformance.
+    \item \textbf{For the academic community:} The research enriches the broader renewable energy discourse by injecting high-quality, primary field data from an underrepresented, high-temperature semi-arid climate zone.
+\end{itemize}
+
+
