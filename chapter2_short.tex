@@ -1,0 +1,53 @@
+% CHAPTER 2 - CONDENSED
+\chapter{SOLAR PV SYSTEM COMPONENTS AND WORKING PRINCIPLES}
+
+\section{Overview of Solar Photovoltaic Technology}
+
+Solar photovoltaic cells convert sunlight directly into electricity through the photovoltaic effect. When photons with sufficient energy strike a semiconductor p-n junction, they generate electron-hole pairs that create a voltage across the cell. The key output parameters are open-circuit voltage ($V_{oc}$), short-circuit current ($I_{sc}$), maximum power point voltage ($V_{mp}$), maximum power point current ($I_{mp}$), and maximum power ($P_{max} = V_{mp} \times I_{mp}$). The Fill Factor, defined as $FF = P_{max}/(V_{oc} \times I_{sc})$, indicates the quality of the cell, with typical values of 0.75--0.85 for monocrystalline silicon.
+
+
+\section{PV Module Technologies}
+
+Crystalline silicon dominates the PV market with over 95\% market share \cite{fraunhofer2024}:
+
+\begin{itemize}
+    \item \textbf{Monocrystalline Si (mono-Si):} Efficiency 20--24\%, uniform black appearance, highest performance per area. Used in this study.
+    \item \textbf{Polycrystalline Si (poly-Si):} Efficiency 15--18\%, blue speckled appearance, lower cost.
+    \item \textbf{Thin-Film:} Efficiency 10--13\%, flexible, lower performance but suitable for large-area applications.
+\end{itemize}
+
+
+\section{System Components}
+
+\subsection{Solar Charge Controller}
+
+The charge controller regulates power flow between PV modules and batteries. Modern systems use Maximum Power Point Tracking (MPPT) controllers, which continuously adjust the operating point of the PV array to extract maximum power. MPPT controllers achieve 95--99\% tracking efficiency, compared to 65--80\% for basic PWM controllers.
+
+\subsection{Inverter Systems}
+
+Inverters convert DC electricity from PV modules to AC for household use:
+\begin{itemize}
+    \item \textbf{Grid-tied inverter:} Synchronizes with the utility grid, enables export of excess power, but shuts down during grid outages (anti-islanding protection).
+    \item \textbf{Hybrid inverter:} Manages both grid connection and battery storage, enables operation during outages, and maximizes self-consumption. Used in this study.
+\end{itemize}
+
+\subsection{Battery Energy Storage}
+
+Lithium Iron Phosphate (LiFePO$_4$) batteries are the preferred technology for residential storage due to:
+\begin{itemize}
+    \item Cycle life: 3,000--10,000 cycles (vs.\ 500--1,500 for lead-acid)
+    \item Thermal stability: Superior safety in high-temperature environments
+    \item Depth of discharge: 80--95\% usable capacity
+    \item Round-trip efficiency: 92--98\%
+\end{itemize}
+
+
+\section{System Configurations}
+
+\subsection{On-Grid (Grid-Tied) Systems}
+
+On-grid systems connect directly to the utility grid without battery storage. Excess generation is exported to the grid, and the household draws from the grid when solar production is insufficient. Advantages include lower cost and simpler design; the critical disadvantage is complete shutdown during grid outages.
+
+\subsection{Hybrid Systems}
+
+Hybrid systems combine grid connection with battery storage, enabling both grid interaction and autonomous operation during outages. The inverter prioritizes: (1) powering loads from solar, (2) charging batteries with excess solar, (3) exporting surplus to grid, and (4) drawing from grid only when solar and battery are insufficient. This configuration maximizes self-consumption and provides backup power.

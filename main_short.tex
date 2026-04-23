@@ -1,0 +1,77 @@
+\documentclass[12pt, a4paper]{report}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{geometry}
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{fancyhdr}
+\usepackage{caption}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{\leftmark}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% TITLE PAGE
+\begin{titlepage}
+    \centering
+    \vspace*{1.5cm}
+
+    {\large\textbf{MINISTRY OF HIGHER EDUCATION AND SCIENTIFIC RESEARCH}}\\[0.3cm]
+    {\large\textbf{KURDISTAN REGIONAL GOVERNMENT}}\\[1.5cm]
+
+    \rule{\textwidth}{1.5pt}\\[0.5cm]
+    {\LARGE\bfseries Design, Planning, and Installation of Hybrid\\[0.3cm]
+    and On-Grid Solar Photovoltaic Systems for\\[0.3cm]
+    Residential Applications}\\[0.5cm]
+    \rule{\textwidth}{1.5pt}\\[1.5cm]
+
+    {\large A Graduation Research Project\\
+    Submitted in Partial Fulfillment of the Requirements\\
+    for the Degree of Bachelor of Science}\\[1.5cm]
+
+    {\large\textbf{Submitted by:}}\\[0.3cm]
+    {\large Abdulla Aziz Hameed}\\[0.15cm]
+    {\large Ibrahim Kamal}\\[1cm]
+
+    {\large\textbf{Supervised by:}}\\[0.3cm]
+    {\large Assist.\ Prof.\ Dr.\ Nasih Hma Salih}\\[1.5cm]
+
+    {\large Department of Physics\\
+    College of Science\\
+    Salahaddin University -- Erbil}\\[1cm]
+
+    {\large Erbil, Kurdistan Region, Iraq\\
+    2026}
+
+\end{titlepage}
+
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\listoftables
+\newpage
+\pagenumbering{arabic}
+
+\input{chapter1_short}
+\input{chapter2_short}
+\input{chapter3_short}
+\input{chapter4_short}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

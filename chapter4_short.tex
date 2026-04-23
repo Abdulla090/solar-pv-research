@@ -1,0 +1,167 @@
+% CHAPTER 4 - CONDENSED
+\chapter{RESULTS, ANALYSIS, AND DISCUSSION}
+
+\section{Performance Analysis}
+
+Analysis of 21 field measurements revealed the following key performance characteristics:
+
+\begin{itemize}
+    \item \textbf{Peak output:} 832.4~Wp (13 April, midday), corresponding to optimal spring irradiance at 15$^{\circ}$C.
+    \item \textbf{Average power:} 488.4~Wp across all valid measurement points.
+    \item \textbf{Temperature effect:} A voltage reduction of $\sim$0.9~V in $V_{oc}$ was observed across the 10--19$^{\circ}$C measurement range, consistent with the module's --0.34\%/$^{\circ}$C temperature coefficient.
+    \item \textbf{Fill Factor:} Average FF of 0.82, indicating the modules perform within manufacturer specifications for high-quality monocrystalline silicon (typical range: 0.75--0.85).
+    \item \textbf{Wind cooling:} Moderate wind speeds (10--25~km/h) correlated with marginally higher outputs due to convective cooling of module surfaces.
+\end{itemize}
+
+
+\section{Energy Yield and Performance Metrics}
+
+\begin{table}[H]
+\centering
+\caption{Annual Performance Comparison: On-Grid vs.\ Hybrid}
+\label{tab:short_performance}
+\begin{tabular}{@{}p{5.5cm} c c@{}}
+\toprule
+\textbf{Parameter} & \textbf{On-Grid} & \textbf{Hybrid} \\
+\midrule
+Annual Energy Production & 7,154 kWh & 6,789 kWh \\
+Specific Yield & 1,445 kWh/kWp & 1,372 kWh/kWp \\
+Performance Ratio & 79.2\% & 75.1\% \\
+Capacity Factor & 16.5\% & 15.7\% \\
+Self-Consumption Ratio & 30--40\% & 70--80\% \\
+Self-Sufficiency Ratio & 35--45\% & 55--65\% \\
+Backup During Outages & None & 6--10 hours \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The on-grid system produces 5.1\% more energy annually due to the absence of battery losses. However, the hybrid system achieves approximately \textbf{double} the self-consumption ratio (70--80\% vs.\ 30--40\%), meaning significantly more of its generated energy is actually used on-site. In the absence of net metering, the 60--70\% of on-grid generation that is exported to the grid generates minimal revenue, effectively wasting the majority of the system's output.
+
+
+\section{Techno-Economic Comparison}
+
+\begin{table}[H]
+\centering
+\caption{Economic Comparison: On-Grid vs.\ Hybrid (USD, 2026)}
+\label{tab:short_economics}
+\begin{tabular}{@{}p{5.5cm} c c@{}}
+\toprule
+\textbf{Parameter} & \textbf{On-Grid} & \textbf{Hybrid} \\
+\midrule
+Total Capital Cost & \$3,000 & \$5,650 \\
+Cost per Watt & \$0.61/Wp & \$1.14/Wp \\
+Grid electricity savings (\$/yr) & 285 & 428 \\
+Diesel generator avoided (\$/yr) & 0 & 1,200 \\
+\textbf{Total Annual Savings} & \textbf{\$330/yr} & \textbf{\$1,643/yr} \\
+\textbf{Payback Period} & \textbf{9.1 years} & \textbf{3.4 years} \\
+LCOE & \$0.052/kWh & \$0.098/kWh \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Despite its 88\% higher capital cost, the hybrid system achieves a payback period of only \textbf{3.4~years}---less than half the on-grid system's 9.1~years. This is driven by the substantial diesel generator displacement savings of \$1,200/year that the on-grid system cannot capture (since it shuts down during grid outages). Both systems produce electricity far cheaper than diesel generators (\$0.32--0.45/kWh).
+
+
+\section{Environmental Impact}
+
+\begin{table}[H]
+\centering
+\caption{Annual CO$_2$ Emission Reductions}
+\label{tab:short_co2}
+\begin{tabular}{@{}p{5.5cm} c c@{}}
+\toprule
+\textbf{Parameter} & \textbf{On-Grid} & \textbf{Hybrid} \\
+\midrule
+Total CO$_2$ avoided (kg/yr) & 2,433 & 6,089 \\
+25-year lifetime (tonnes) & 60.8 & 152.2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The hybrid system avoids \textbf{2.5$\times$ more CO$_2$ emissions} over its lifetime, primarily through diesel generator displacement. A single hybrid installation prevents an estimated 152~tonnes of CO$_2$ over 25~years, while also eliminating diesel-related NO$_x$, particulate matter, and noise pollution from residential neighborhoods.
+
+
+\section{The Runaki Project and Its Impact on Solar Economics}
+
+The KRG's ``Runaki'' project (launched late 2024) aims to provide 24-hour grid electricity with a progressive tiered tariff:
+
+\begin{table}[H]
+\centering
+\caption{Runaki Progressive Tariff Structure}
+\label{tab:short_runaki}
+\begin{tabular}{@{}c c c@{}}
+\toprule
+\textbf{Consumption Tier} & \textbf{Rate (IQD/kWh)} & \textbf{Rate (\$/kWh)} \\
+\midrule
+1 -- 400 kWh & 72 & 0.055 \\
+401 -- 800 kWh & 108 & 0.082 \\
+801 -- 1,200 kWh & 175 & 0.134 \\
+1,201 -- 1,600 kWh & 265 & 0.203 \\
+1,601+ kWh & 350 & 0.268 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Benefits:} 24-hour supply eliminates outages; displaces diesel generators; smart metering infrastructure; encourages energy conservation.
+
+\textbf{Disadvantages and public concerns:}
+\begin{itemize}
+    \item Households with high consumption face bills \textbf{2--3$\times$ higher} than expected, with the top tier reaching \$0.268/kWh---approaching diesel generator costs
+    \item Disproportionate burden on low-income and large families
+    \item Meter reading irregularities (billing cycles exceeding 30 days inflate consumption into higher tiers)
+    \item Summer cooling penalized despite being a health necessity at 43--50$^{\circ}$C
+    \item No net metering or solar prosumer framework
+\end{itemize}
+
+\textbf{Impact on solar PV economics:} Under Runaki's tiered pricing, solar self-consumption becomes significantly more valuable. Every kWh that keeps a household below 400~kWh avoids rates 2.4--4.9$\times$ the base rate. The on-grid payback improves from 9.1 to \textbf{5.2~years}, while the hybrid payback remains strong at \textbf{3.8~years}. Solar PV effectively acts as a ``tariff shield,'' keeping households in lower billing tiers.
+
+
+\section{Comprehensive Comparison}
+
+\begin{table}[H]
+\centering
+\caption{Final On-Grid vs.\ Hybrid Comparison}
+\label{tab:short_final}
+\small
+\begin{tabular}{@{}p{4.5cm} c c c@{}}
+\toprule
+\textbf{Parameter} & \textbf{On-Grid} & \textbf{Hybrid} & \textbf{Advantage} \\
+\midrule
+Capital Cost & \$3,000 & \$5,650 & On-Grid \\
+Annual Energy & 7,154 kWh & 6,789 kWh & On-Grid \\
+Performance Ratio & 79.2\% & 75.1\% & On-Grid \\
+Self-Consumption & 30--40\% & 70--80\% & Hybrid \\
+Annual Savings & \$330 & \$1,643 & Hybrid \\
+Payback Period & 9.1 yr & 3.4 yr & Hybrid \\
+LCOE & \$0.052 & \$0.098 & On-Grid \\
+Outage Backup & None & 6--10 hr & Hybrid \\
+CO$_2$ Avoided (25 yr) & 60.8 t & 152.2 t & Hybrid \\
+\textbf{Overall} & \textbf{Limited} & \textbf{Highly Suitable} & \textbf{Hybrid} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Discussion}
+
+The central finding of this study is that \textit{in contexts where grid reliability is low and diesel generator dependency is high, the conventional economic advantage of on-grid PV systems is inverted.} While on-grid systems show superior technical metrics and lower LCOE, these advantages are largely irrelevant in Erbil where:
+
+\begin{enumerate}
+    \item On-grid systems cannot operate during the 6--12~hour daily outages
+    \item A kWh displacing diesel (\$0.32--0.45) is worth 20--30$\times$ more than displacing subsidized grid electricity (\$0.015)
+    \item Without net metering, 60--70\% of on-grid exports generate zero revenue
+\end{enumerate}
+
+The hybrid system's ability to store energy, provide backup power, and maximize self-consumption makes it the clearly superior configuration for residential applications in the Kurdistan Region, despite its higher upfront cost. The Runaki project's progressive tariff further strengthens this conclusion by making solar self-consumption even more economically valuable.
+
+
+\section{Conclusions}
+
+\begin{enumerate}
+    \item The 4.95~kWp PV system performs within expected parameters: Fill Factor 0.82, specific yield 1,372--1,445~kWh/kWp/year, Performance Ratio 75--79\%.
+    \item The hybrid system achieves a payback of \textbf{3.4~years} versus 9.1~years for on-grid, driven by diesel displacement savings.
+    \item Both systems produce electricity far below diesel cost (\$0.052--0.098/kWh vs.\ \$0.32--0.45/kWh).
+    \item The hybrid system avoids \textbf{152~tonnes of CO$_2$} over 25~years (vs.\ 61~tonnes for on-grid).
+    \item Under Runaki tariffs, solar PV acts as a ``tariff shield,'' improving payback for both configurations.
+    \item \textbf{For Erbil's context, the hybrid PV system is the clearly superior configuration.}
+\end{enumerate}

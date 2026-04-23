@@ -1,0 +1,90 @@
+% CHAPTER 3 - CONDENSED
+\chapter{METHODOLOGY}
+
+\section{Research Design}
+
+This study employs a quantitative experimental approach involving the design, installation, and field testing of a residential PV system in Erbil, Kurdistan Region of Iraq (36.19$^{\circ}$N, 44.01$^{\circ}$E, elevation 420~m). Data was collected across two seasons (winter and spring 2025) to evaluate system performance under varying environmental conditions.
+
+
+\section{Site Characteristics}
+
+Erbil's climate is classified as hot semi-arid (BSh, K\"{o}ppen). Key site parameters:
+\begin{itemize}
+    \item Annual GHI: 1,800--2,390 kWh/m$^{2}$/year
+    \item Peak Sun Hours (PSH): 4.4--5.6 kWh/m$^{2}$/day
+    \item Summer temperatures: frequently exceeding 43--50$^{\circ}$C
+    \item Annual sunshine: $>$300 days/year, 9+ hours/day average
+\end{itemize}
+
+
+\section{System Specifications}
+
+\begin{table}[H]
+\centering
+\caption{Installed PV System Specifications}
+\label{tab:short_specs}
+\begin{tabular}{@{}l l@{}}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+PV Module & JA Solar JAM72S30-550/MR \\
+Module Power & 550 Wp (mono-PERC) \\
+Number of Modules & 9 \\
+Total Array Capacity & 4.95 kWp \\
+Module Efficiency & 21.3\% \\
+$V_{oc}$ / $I_{sc}$ & 49.62 V / 14.03 A \\
+$V_{mp}$ / $I_{mp}$ & 41.82 V / 13.16 A \\
+Temp.\ Coefficient ($P_{max}$) & --0.34\%/$^{\circ}$C \\
+Hybrid Inverter & 5 kW, dual MPPT \\
+Battery & 48V 200Ah LiFePO$_4$ (9.6 kWh) \\
+Tilt Angle & 30$^{\circ}$ (south-facing) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Data Collection}
+
+Field measurements were conducted using calibrated instruments (digital multimeter, clamp meter, anemometer, thermometer) during two campaigns:
+\begin{itemize}
+    \item \textbf{Winter:} 12--16 February 2025 (5 days, 15 measurements)
+    \item \textbf{Spring:} 13 April 2025 (1 day, 6 measurements across 2 sessions)
+\end{itemize}
+
+Each measurement recorded: $V_{oc}$, $I_{sc}$, $V_{mp}$, $I_{mp}$, $P_{max}$, ambient temperature, wind speed, humidity, and cloud conditions at three time intervals (morning 08:00, midday 12:00, afternoon 15:00).
+
+
+\section{Measured Data}
+
+\begin{table}[H]
+\centering
+\caption{Summary of Field Measurements (Selected Representative Points)}
+\label{tab:short_data}
+\small
+\begin{tabular}{@{}l l c c c c c@{}}
+\toprule
+\textbf{Date} & \textbf{Time} & \textbf{Temp ($^{\circ}$C)} & \textbf{$V_{mp}$ (V)} & \textbf{$I_{mp}$ (A)} & \textbf{$P_{max}$ (Wp)} & \textbf{Wind} \\
+\midrule
+12 Feb & Morning & 10 & 41.7 & 0.85 & 35.3 & 6 km/h \\
+12 Feb & Midday & 14 & 40.8 & 3.90 & 159.0 & 8 km/h \\
+14 Feb & Midday & 19 & 40.2 & 5.60 & 225.0 & 3 km/h \\
+15 Feb & Morning & 11 & 42.1 & 15.44 & 650.0 & 18 km/h \\
+16 Feb & Midday & 13 & 42.0 & 16.72 & 702.0 & 25 km/h \\
+16 Feb & Afternoon & 14 & 40.3 & 17.61 & 709.6 & 13 km/h \\
+13 Apr S1 & Midday & 15 & 40.4 & 20.60 & 832.4 & 2 km/h \\
+13 Apr S2 & Midday & 17 & 39.6 & 15.72 & 622.4 & 7 km/h \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Data Quality Observations}
+
+Three anomalies were identified in the complete dataset and are acknowledged as measurement limitations:
+\begin{enumerate}
+    \item A 6$^{\circ}$C temperature reading on 13 April (afternoon) is abnormally low for spring in Erbil and likely reflects sensor error or localized micro-climatic conditions.
+    \item On 14 February, the midday output (225~Wp) was lower than the afternoon output (228~Wp), contrary to expected diurnal patterns, possibly due to transient cloud cover.
+    \item On 12 February (afternoon), $I_{mp}$ equaled $I_{sc}$ (3.2~A), which is physically impossible under normal conditions and indicates a measurement artifact.
+\end{enumerate}
+
+These anomalies affect fewer than 15\% of the 21 total measurements and do not invalidate the overall dataset trends.
