@@ -435,6 +435,95 @@ The economic analysis is most sensitive to:
 \end{itemize}
 
 
+\subsection{The ``Runaki'' (Light) Project: Impact on Residential Solar Economics}
+
+The ``Runaki'' project, launched by the Kurdistan Regional Government's Ministry of Electricity in late 2024, represents the most significant structural reform of the Kurdistan Region's electricity sector in decades. The project aims to deliver 24-hour continuous national grid electricity to all households across the Kurdistan Region by the end of 2026, progressively replacing dependence on private neighborhood diesel generators \cite{krgmoe2024}. While the project carries substantial potential benefits, it has also generated considerable public controversy---particularly regarding its progressive tiered tariff structure---with direct implications for residential solar PV economics.
+
+\subsubsection{Progressive Tiered Tariff Structure}
+
+Under the Runaki framework, residential electricity is billed according to a progressive (tiered) pricing model, where the per-kWh rate increases significantly as monthly consumption rises:
+
+\begin{table}[H]
+\centering
+\caption{Runaki Project: Progressive Residential Electricity Tariff Structure}
+\label{tab:runaki_tariff}
+\begin{tabular}{@{}c c c c@{}}
+\toprule
+\textbf{Consumption Tier} & \textbf{Rate (IQD/kWh)} & \textbf{Rate (\$/kWh)} & \textbf{Multiplier} \\
+\midrule
+1 -- 400 kWh & 72 & 0.055 & 1.0$\times$ (base) \\
+401 -- 800 kWh & 108 & 0.082 & 1.5$\times$ \\
+801 -- 1,200 kWh & 175 & 0.134 & 2.4$\times$ \\
+1,201 -- 1,600 kWh & 265 & 0.203 & 3.7$\times$ \\
+1,601+ kWh & 350 & 0.268 & 4.9$\times$ \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\small Exchange rate: 1~USD $\approx$ 1,310~IQD (2026). Source: KRG Ministry of Electricity.
+\end{flushleft}
+\end{table}
+
+This structure means that a household consuming 2,000~kWh/month---typical during Erbil's extreme summer when air conditioning operates 8--12~hours daily---would face a blended cost approximately \textbf{2.5--3$\times$ higher per kWh} than a household consuming only 400~kWh/month. The top-tier rate of 350~IQD/kWh (\$0.268/kWh) approaches the cost of diesel generator electricity (\$0.32--0.45/kWh), undermining the intended cost advantage of the national grid for high-consumption households.
+
+\subsubsection{Benefits of the Runaki Project}
+
+\begin{enumerate}
+    \item \textbf{24-hour grid reliability:} The most significant benefit is the promise of continuous electricity supply, eliminating the chronic 6--12~hour daily outages that have plagued the Kurdistan Region for decades.
+    \item \textbf{Diesel generator displacement:} As grid availability approaches 24~hours, households can reduce or eliminate their diesel generator subscriptions (100,000--450,000~IQD/month), yielding substantial savings for moderate-consumption households.
+    \item \textbf{Environmental improvement:} Eliminating thousands of neighborhood diesel generators reduces CO$_2$, NO$_x$, particulate matter, and noise pollution across residential areas.
+    \item \textbf{Infrastructure modernization:} The project includes smart metering infrastructure, enabling accurate consumption tracking and laying the groundwork for future net metering and solar prosumer policies.
+    \item \textbf{Conservation incentive:} The tiered structure encourages energy efficiency and discourages wasteful consumption patterns.
+\end{enumerate}
+
+\subsubsection{Disadvantages and Public Concerns}
+
+\begin{enumerate}
+    \item \textbf{Escalating bills for high-consumption households:} The most widespread complaint is that households with high electricity demand---particularly during summer---face bills that are \textbf{2--3$\times$ higher} than anticipated. A household consuming 1,500~kWh/month would pay approximately 194,500~IQD (\$148), while a household consuming 2,000~kWh/month would pay approximately 369,500~IQD (\$282). Many citizens report that these bills exceed their previous combined grid and generator costs.
+    \item \textbf{Disproportionate impact on low-income families:} Critics, including several Kurdistan Region parliamentarians, have argued that the tiered structure places an unfair burden on low- and middle-income households, particularly large families with higher baseline consumption needs.
+    \item \textbf{Meter reading irregularities:} Public complaints have emerged regarding billing periods extending beyond the standard 30~days (e.g., 45-day billing cycles), which artificially inflates consumption into higher tariff tiers.
+    \item \textbf{Seasonal penalty:} The tiered structure disproportionately penalizes summer consumption, when cooling is not a luxury but a health necessity in temperatures exceeding 43--50$^{\circ}$C.
+    \item \textbf{Absence of prosumer framework:} The Runaki project does not currently include provisions for net metering or solar prosumer compensation, meaning households with PV systems cannot sell excess generation back to the grid at favorable rates.
+    \item \textbf{Legal challenges:} Political opposition factions attempted to halt the project through the Iraqi Federal Supreme Court in 2025, though the court dismissed the case citing lack of jurisdiction over regional administrative policy.
+\end{enumerate}
+
+\subsubsection{Implications for Residential Solar PV Systems}
+
+The Runaki tariff structure fundamentally alters the economic calculus for residential solar PV in the Kurdistan Region:
+
+\begin{enumerate}
+    \item \textbf{Solar becomes more valuable under tiered pricing:} Under the old flat-rate subsidized tariff (\$0.015/kWh), solar PV displaced very cheap electricity, resulting in long payback periods. Under Runaki's tiered structure, every kWh of solar self-consumption that keeps a household below the 400~kWh threshold avoids electricity priced at 2.4--4.9$\times$ the base rate. This dramatically improves the economic return of solar PV.
+    
+    \item \textbf{Revised payback calculation under Runaki tariffs:} Using the Runaki tiered rates instead of the flat subsidized rate, the annual grid electricity savings increase substantially:
+
+    \begin{table}[H]
+    \centering
+    \caption{Revised Annual Savings Under Runaki Tiered Tariffs}
+    \label{tab:runaki_savings}
+    \small
+    \begin{tabular}{@{}p{5cm} c c@{}}
+    \toprule
+    \textbf{Component} & \textbf{On-Grid (\$/yr)} & \textbf{Hybrid (\$/yr)} \\
+    \midrule
+    Grid savings (Runaki tariff) & 580 & 870 \\
+    Diesel generator avoided & 0 & 600\textsuperscript{$\dagger$} \\
+    \midrule
+    \textbf{Total Annual Savings} & \textbf{\$580} & \textbf{\$1,470} \\
+    \textbf{Revised Payback} & \textbf{5.2 years} & \textbf{3.8 years} \\
+    \bottomrule
+    \end{tabular}
+    \begin{flushleft}
+    \small\textsuperscript{$\dagger$}Reduced diesel displacement value assumes Runaki achieves 20--22~hours daily grid availability.
+    \end{flushleft}
+    \end{table}
+
+    Under Runaki tariffs, the on-grid payback improves from 9.1 to \textbf{5.2~years}, while the hybrid payback remains competitive at \textbf{3.8~years} even with reduced diesel displacement value.
+
+    \item \textbf{Hybrid systems retain their advantage:} Even if Runaki achieves its goal of 24-hour supply, the tiered pricing structure ensures that hybrid systems---which maximize self-consumption and minimize grid imports into higher tiers---remain economically superior for high-consumption households.
+    
+    \item \textbf{Solar as a ``tariff shield'':} Residential solar PV effectively acts as a hedge against the escalating tiered tariff structure, keeping households in lower billing tiers and providing protection against potential future tariff increases.
+\end{enumerate}
+
+
 \subsection{Limitations of the Analysis}
 
 \begin{enumerate}
